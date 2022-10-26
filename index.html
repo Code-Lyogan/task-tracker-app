@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Task List</title>
+  </head>
+  <body>
+    <main class="app">
+
+      <!-- Greeting -->
+      <section class="greeting">
+        <h2 class="title">
+          Hello <input type="text" id="name" placeholder="Insert Name here" />, Any plans today?
+        </h2>
+      </section>
+
+      <!-- Form -->
+      <section class="create-task">
+        <h3>What's on the agenda?</h3>
+        <form id="new-task-form">
+          <h4>Write your tasks here:</h4>
+          <input
+            type="text" placeholder="What do you need to do?"name="content" id="content" required
+          />
+
+          <h4>What's your time frame?</h4>
+          <div class="options">
+            <label>
+              <input
+                type="radio" name="category" id="category1" value="business"
+              />
+              <span class="bubble business"></span>
+              <div>Urgent</div>
+            </label>
+            <label>
+              <input type="radio" name="category" id="category2" value="personal"
+              />
+              <span class="bubble personal"></span>
+              <div>Later</div>
+            </label>
+          </div>
+
+          <input type="submit" value="Add task" />
+        </form>
+      </section>
+
+      <section class="task-list">
+        <h3>Tasks Left</h3>
+        <div class="list" id="task-list"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
